@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 0px 0px;
+    display: flex;
+    width: 100%;
+    background-color: yellowgreen;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* ** FIRST TEST GROUP ** */
+
+.container1 {
+    margin: 5px 5px;
+    display: flex;
+    width: 45%;
+    height: 600px;
+    background-color: purple;
+    justify-content: space-around;
+    align-items: center;
+    /* Mor kutu içindeki kırmızı kutuların genişliğe göre aşağıya kayması için  flex-direction ve flex-wrap özelliklerini verdik. Burada dikkat edilmesi gereken nokta şudur: Hareket etmesini istediğimiz item'ları taşıyan kutuya bu özellikleri tanımlamak.*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.purplebox {
+    width: 120px;
+    height: 120px;
+    background-color: red;
+}
+
+.container div p {
+    position: relative;
+    top: 30px;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+h3{
+    color: black;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* ** SECOND TEST GROUP ** */
+
+.container2 {
+    margin: 5px 5px;
+    display: flex;
+    width: 45%;
+    height: 600px;
+    background-color: red;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.redbox {
+    width: 120px;
+    height: 120px;
+    background-color: purple;
+}
+
+/* ------------------*/
+
+@media screen and (max-width: 768px) {
+
+/* Ortalama tablet boyutu olan 768px'i baz alarak max genişlik belirledik. Buna göre ana container içidenki container1 ve container2, ekran çözünürlüğü max768px olduğunda %100 genişliğe kavuşak ve böylece alt satıra kayacaklar. Bunu yaparken yukardaki değerlerin de önemli olduğu (flex ve onun diğer özellikleri) hatırlanmalıdır.  */ 
+
+    .container1 {
+        width: 100%;
+    }
+
+    .container2 {
+        width: 100%;
+
+    }
+
+}
